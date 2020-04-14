@@ -1,0 +1,5 @@
+﻿comic "Grrl Power"
+start_at "http://grrlpowercomic.com/archives/48"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" class="navi navi-next" title="Next">Next</a>"""):
+    download("""<img src="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" class="ishadow40" />""")

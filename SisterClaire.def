@@ -1,0 +1,5 @@
+﻿comic "Sister Claire"
+start_at "http://www.sisterclaire.com/sisterclaire/1"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" class="next" rel="next">"""):
+	download("""<img title="(?:[^"]*?)" src="(?<content>[^"]*?)" id="comic" border="0"(?: \/)?>""")

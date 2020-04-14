@@ -1,0 +1,5 @@
+﻿comic "The Dreamland Chronicles"
+start_at "http://www.thedreamlandchronicles.com/comic/welcome-to-the-dreamland-chronicles/"
+ 
+for page in visit("""<a href="(?<content>http:\/\/www.thedreamlandchronicles.com\/[^"]*)" class="navi comic-nav-next navi-next" """):
+    download("""src="(?<content>http:\/\/www.thedreamlandchronicles.com\/wp-content\/uploads\/[^"]*?.(gif|jpg|jpeg|png))" alt="[^"]*?" """)

@@ -1,0 +1,5 @@
+﻿comic "Dilbert"
+start_at "http://dilbert.com/strips/comic/1989-04-16/"
+ 
+for page in visit("""<a href="(?<content>[^"]*)" class=".*?"><span>Next</span></a>"""):
+    foo = download("""src="(?<content>/dyn/str_strip/\d+/\d+/\d+/\d+/\d+/\d+/\d+/\d+/\d+.strip.zoom.gif)" """)

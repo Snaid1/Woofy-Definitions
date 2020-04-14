@@ -1,0 +1,10 @@
+﻿comic "Zap Comic"
+start_at "http://www.zapcomic.com/2004/07/20051024/"
+
+for page in visit("""<a href="(?<content>http:\/\/www.zapcomic.com\/[^"]*?\/)" title="[^"]*?" class="next-comic-link">"""):
+    
+    download("""<img src="(?<content>http://www.zapcomic.com/comics/zap/[\w()-]*\.(gif|jpg|jpeg|png))""")
+	
+for page in visit("""<a href="(?<content>http:\/\/www.zapcomic.com\/[^"]*?\/)" title="[^"]*?"[^"]*?""="" class="next-comic-link">"""):
+    
+    download("""<img src="(?<content>http://www.zapcomic.com/comics/zap/[\w()-]*\.(gif|jpg|jpeg|png))""")

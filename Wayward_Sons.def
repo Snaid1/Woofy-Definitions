@@ -1,0 +1,5 @@
+﻿comic "Wayward Sons - Legends"
+start_at "http://waywardsons.keenspot.com/d/20100531.html"
+ 
+for page in visit("""<link rel="next" href="(?<content>[^"]*?)" />"""):
+    download("""<div id="comicpos" ><img class="ksc" title="" border="0" style="[^"]*?" src="(?<content>[^"]*?)" width="[^"]*?" height="[^"]*?" />""")

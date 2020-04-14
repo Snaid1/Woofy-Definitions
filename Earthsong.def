@@ -1,0 +1,5 @@
+﻿comic "Earthsong"
+start_at "http://earthsongsaga.com/vol1/vol1cover.php"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" title="Next">Next<\/a>"""):
+    download("""<div id="comic" align="center">[\n ]*(<a href="|<img src=")(?<content>[^"]*?)"[ \/]*>""")

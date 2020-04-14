@@ -1,0 +1,6 @@
+﻿comic "Questionable Content"
+start_at "http://www.questionablecontent.net/view.php?comic=1"
+ 
+for page in visit("""<a href="(?<content>view\.php\?comic=[\d]*)">Next</a>"""):
+    description("""<div id="news">(?<content>.*?)</div>""")
+    download("""<img id="strip" src="(?<content>./comics/[\w()-]*\.(gif|jpg|jpeg|png))""")

@@ -1,0 +1,5 @@
+﻿comic "Delve"
+start_at "http://thisis.delvecomic.com/NewWP/comic/in-too-deep/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" class="comic-nav-base comic-nav-next">Next &rsaquo;<\/a>"""):
+    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

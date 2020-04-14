@@ -1,0 +1,5 @@
+﻿comic "Gunnerkrigg Court"
+start_at "http://www.gunnerkrigg.com/?p=1"
+ 
+for page in visit("""<a class="right" href="(?<content>[^"]*?)"><img src="http:\/\/www.gunnerkrigg.com\/images\/next_a.jpg"><\/a>"""):
+    download("""<img class="comic_image" src="(?<content>[^"]*?)">""")

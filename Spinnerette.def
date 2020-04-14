@@ -1,0 +1,5 @@
+﻿comic "Spinnerette"
+start_at "http://www.spinnyverse.com/2010/02/09/20100209/"
+ 
+for page in visit("""<a title="Next Comic" href="(?<content>[^"]*)">Next Comic</a>"""):
+    download("""src="(?<content>http://www.spinnyverse.com/comics/[^"]*?)" """)

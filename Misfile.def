@@ -1,0 +1,5 @@
+﻿comic "Misfile"
+start_at "http://www.misfile.com/?date=2004-02-22"
+ 
+for page in visit("""<link rel='Next'[^\n]*?href='(?<content>[^\n]*?)'"""):
+    download("""<img src='(?<content>[^"]*?)' width='[^"]*?' height='[^"]*?' title='[^"]*?' alt='[^"]*?' />""")

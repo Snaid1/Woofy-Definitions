@@ -1,0 +1,5 @@
+﻿comic "Over the Hedge"
+start_at "http://www.gocomics.com/overthehedge/1995/06/12"
+ 
+for page in visit("""<a role='button' href='(?<content>[^"]*?)' class='fa btn btn-outline-default btn-circle fa-caret-right sm ' title='' ><\/a>[\n ]*<a"""):
+    download("""<img width="900" sizes="100vw" srcset="(?:[^"]*?)" src="(?<content>[^"]*?)" \/>""")

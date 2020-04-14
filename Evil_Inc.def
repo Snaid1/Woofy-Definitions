@@ -1,0 +1,11 @@
+﻿comic "Evil Inc"
+start_at "http://evil-inc.com/comic/monday-3/"
+ 
+for page in visit("""<a href="(?<content>[^"]*)" class="comic-nav-base comic-nav-next">"""):
+    download("""<meta property="og:image" content="(?<content>http://[^"]*?)" """)
+ 
+    cartoon_title = match("""<title>(?<content>.*?) - Evil Inc</title>""") as (string)
+    if cartoon_title != null:
+        warn("{0} ~TITLE ~{1}" % (page, cartoon_title[0]))
+ 
+# Comments appear in the log file with the title of each cartoon.

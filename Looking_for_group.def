@@ -1,0 +1,5 @@
+﻿comic "Looking for Group"
+start_at "http://www.lfgcomic.com/page/1/"
+ 
+for page in visit("""&lsaquo;</a>.*?\t?\t?\t?.*?<a href="(?<content>.*?)" class="comic-nav-next">"""):
+    download("""<div id="comic">.*?\r?\n?.*?<img src="(?<content>.*?)" />""")

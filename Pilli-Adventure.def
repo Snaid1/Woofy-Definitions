@@ -1,0 +1,5 @@
+﻿comic "Pilli Adventure"
+start_at "http://pilli-adventure.com/?p=2100"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" rel="next">Next &#9658;<\/a>"""):
+    download("""<img src="(?<content>[^"]*?)" alt="(?:[^"]*?)" title="(?:[^"]*?)" \/>""")

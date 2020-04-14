@@ -1,0 +1,5 @@
+﻿comic "Girls with Slingshots"
+start_at "http://www.girlswithslingshots.com/comic/gws1/"
+ 
+for page in visit("""<a href="(?<content>[^"]*)" class="next" rel="next">"""):
+    download("""src="(?<content>[^"]*)" id="comic" border="0" />""")

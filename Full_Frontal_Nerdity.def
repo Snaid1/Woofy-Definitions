@@ -1,0 +1,5 @@
+﻿comic "Full Frontal Nerdity"
+start_at "http://ffn.nodwick.com/?p=6"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" rel="next">Next &rsaquo;</a>"""):
+    download("""<div id="comic-1" class="comicpane"><img src="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?"/>""")
