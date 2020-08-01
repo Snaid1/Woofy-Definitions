@@ -1,0 +1,5 @@
+﻿comic "Dangerously Chloe"
+start_at "https://pixietrixcomix.com/dangerously-chloe/volume-1-page-1"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

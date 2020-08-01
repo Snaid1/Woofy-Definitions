@@ -1,0 +1,5 @@
+﻿comic "Familiar"
+start_at "http://familiar.soushiyo.com/comic/00-00/"
+ 
+for page in visit("""<a href='(?<content>[^"]*?)' class='webcomic-link webcomic1-link next-webcomic-link next-webcomic1-link'><img """):
+    download("""<img width="[0-9]*" height="[0-9]*" src="(?<content>[^"]*?)?" class="attachment-full size-full" """)

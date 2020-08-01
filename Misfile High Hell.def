@@ -1,5 +1,5 @@
-﻿comic "Misfile"
-start_at "http://www.misfile.com/misfile/2004-02-22"
+﻿comic "Misfile High Hell"
+start_at "http://www.misfile.com/hell-high/2019-08-29"
  
 for page in visit("""<a href="(?<content>[^"]*?)"><img title=".*?" src=".*?" id="cc-comic" \/>"""):
     download("""<a href=".*?"><img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" \/>""")

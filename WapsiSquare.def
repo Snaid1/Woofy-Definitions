@@ -1,0 +1,5 @@
+﻿comic "Wapsi Square"
+start_at "http://wapsisquare.com/comic/09092001/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?><img src="(?:.|\s)*?" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?"""):
+    download("""<img src="(?<content>[^"]*?)" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?""")

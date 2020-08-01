@@ -1,0 +1,5 @@
+comic "The Monster Under The Bed"
+start_at "http://themonsterunderthebed.net/?comic=test-post"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:[^"]*?)" title="(?:[^"]*?)" >"""):
+    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

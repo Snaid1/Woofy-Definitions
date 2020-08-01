@@ -1,0 +1,5 @@
+﻿comic "Penny And Aggie"
+start_at "https://pixietrixcomix.com/penny-and-aggie/2004-09-06"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

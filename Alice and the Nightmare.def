@@ -1,0 +1,5 @@
+﻿comic "Alice and the Nightmare"
+start_at "http://www.aliceandthenightmare.com/comic/chapter-one-cover"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)"><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

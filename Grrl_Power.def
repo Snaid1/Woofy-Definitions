@@ -1,5 +1,5 @@
 ﻿comic "Grrl Power"
-start_at "http://grrlpowercomic.com/archives/48"
+start_at "https://grrlpowercomic.com/archives/comic/gp0001/"
  
-for page in visit("""<a href="(?<content>[^"]*?)" class="navi navi-next" title="Next">Next</a>"""):
-    download("""<img src="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" class="ishadow40" />""")
+for page in visit("""<a href="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" >"""):
+    download("""<img src="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" *?\/>""")

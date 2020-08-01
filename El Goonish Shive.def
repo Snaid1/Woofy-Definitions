@@ -1,0 +1,5 @@
+﻿comic "El Goonish Shive"
+start_at "https://www.egscomics.com/comic/2002-01-21"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)"><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

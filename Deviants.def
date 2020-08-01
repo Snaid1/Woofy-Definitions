@@ -1,0 +1,5 @@
+﻿comic "Deviants"
+start_at "https://www.sexyversecomics.com/deviants/nsfw-webcomic/comic/chapter-1-cover/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:[^"]*?)" title="(?:[^"]*?)" >"""):
+    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

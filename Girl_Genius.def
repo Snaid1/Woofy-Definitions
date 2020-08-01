@@ -1,5 +1,5 @@
 ﻿comic "Girl Genius"
 start_at "http://www.girlgeniusonline.com/comic.php?date=20021104"
  
-for page in visit("""title="The Previous Comic"></a><a href="(?<content>http://www.girlgeniusonline.com/comic.php\?date=\d\d\d\d\d\d\d\d)" id="bottomnext" title="The Next Comic">"""):
-    download("""<IMG ALT="Comic" BORDER=0 SRC='(?<content>http://www.girlgeniusonline.com/ggmain/strips/.*?.(gif|jpg|jpeg|png))' WIDTH=""")
+for page in visit("""<a href="(?<content>[^"]*?)"><IMG ALT=".*?" BORDER=.*? SRC='.*?'"""):
+    download("""<a href=".*?"><IMG ALT=".*?" BORDER=.*? SRC='(?<content>[^"]*?)'""")

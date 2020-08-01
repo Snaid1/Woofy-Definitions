@@ -1,0 +1,5 @@
+﻿comic "Cup O' Love"
+start_at "http://dsan.orgymania.net/comic/mya-janet-1"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)"><img title="(?:[^"]*?)" src="(?:[^"]*?)" id="(?:[^"]*?)" border="(?:[^"]*?)" *\/>"""):
+    download("""<img title="(?:[^"]*?)" src="(?<content>[^"]*?)?" id="(?:[^"]*?)" border="(?:[^"]*?)" *\/>""")

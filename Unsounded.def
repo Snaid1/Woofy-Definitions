@@ -1,5 +1,5 @@
 ﻿comic "Unsounded"
 start_at "http://www.casualvillain.com/Unsounded/comic/ch01/ch01_01.html"
  
-for page in visit("""<a href="(?<content>[^"]*?)" class="forward" title="forward">"""):
-    download("""src="(?<content>pageart/[^"]*?)".*?>""")
+for page in visit("""<div id="comic">\s*?<a href="(?<content>[^"]*?html)" ?>\s*?<img src="(?:.|\s)*?" ?"""):
+    download("""<div id="comic">(?:.|\s)*?<img src="(?<content>[^"]*?)" ?""")

@@ -1,0 +1,5 @@
+﻿comic "PS238"
+start_at "http://ps238.nodwick.com/comic/12072006/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt=".*?" title=".*?" ><img src=".*?" alt=".*?" title=".*?" """):
+    download("""<img src="(?<content>[^"]*?)" alt=".*?" title=".*?" """)

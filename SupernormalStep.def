@@ -1,0 +1,5 @@
+﻿comic "Supernormal Step"
+start_at "https://www.supernormalstep.com/archives/8"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title="(?:.|\s)*?" src="(?:.|\s)*?" id="(?:.|\s)*?" ?"""):
+    download("""<img title="(?:.|\s)*?" src="(?<content>[^"]*?)" id="(?:.|\s)*?" ?""")

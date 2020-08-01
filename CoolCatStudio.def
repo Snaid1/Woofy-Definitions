@@ -1,0 +1,5 @@
+﻿comic "Cool Cat Studio"
+start_at "https://pixietrixcomix.com/cool-cat-studio/2000-03-13"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

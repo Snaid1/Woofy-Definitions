@@ -1,0 +1,5 @@
+﻿comic "Eerie Cuties"
+start_at "https://pixietrixcomix.com/eerie-cuties/2009-06-01"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

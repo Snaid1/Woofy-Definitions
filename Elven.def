@@ -1,0 +1,5 @@
+﻿comic "Elven"
+start_at "http://elven.co.nz/comic/elven-00001/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt=".*?" title=".*?" ><img src=".*?" alt=".*?" title=".*?" """):
+    download("""<img src="(?<content>[^"]*?)" alt=".*?" title=".*?" """)

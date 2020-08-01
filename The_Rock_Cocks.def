@@ -1,0 +1,5 @@
+﻿comic "The Rock Cocks"
+start_at "http://rockcocks.slipshine.net/comic/page-1-nsfw-track-1-start"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" class="next" rel="next"><\/a>"""):
+    download("""<img title="(?:[^"]*?)" src="(?<content>[^"]*?)?" id="(?:[^"]*?)" border="(?:[^"]*?)" *\/>""")

@@ -1,0 +1,5 @@
+comic "Ship In a Bottle"
+start_at "http://shipinbottle.pepsaga.com/?comic=the-results-are-in"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:[^"]*?)" title="(?:[^"]*?)" >"""):
+    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

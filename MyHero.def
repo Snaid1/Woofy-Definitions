@@ -1,0 +1,5 @@
+﻿comic "My Hero"
+start_at "https://www.myherocomic.com/comic/ch1-00"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?><img src="(?:.|\s)*?" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?"""):
+    download("""<img src="(?<content>[^"]*?)" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?""")

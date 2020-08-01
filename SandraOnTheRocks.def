@@ -1,0 +1,5 @@
+﻿comic "Sandra On The Rocks"
+start_at "https://pixietrixcomix.com/sandra-on-the-rocks/start-by-running"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

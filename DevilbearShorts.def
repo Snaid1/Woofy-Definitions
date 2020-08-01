@@ -1,0 +1,5 @@
+﻿comic "Devilbear Shorts"
+start_at "http://www.thedevilbear.com/b/comic/its-for-you/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?><img src="(?:.|\s)*?" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?"""):
+    download("""<img src="(?<content>[^"]*?)" alt="(?:.|\s)*?" title="(?:.|\s)*?" ?""")

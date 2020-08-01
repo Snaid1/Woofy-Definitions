@@ -1,0 +1,5 @@
+﻿comic "Menage a 3"
+start_at "https://pixietrixcomix.com/menage-a-3/for-new-readers"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

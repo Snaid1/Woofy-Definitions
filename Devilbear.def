@@ -1,0 +1,5 @@
+﻿comic "Devilbear Grimoires"
+start_at "http://thedevilbear.com/comics.php?p=1"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)"><img src=".*?" alt="(Next|End)" """):
+    download("""<img src="(?<content>[^"]*?)" alt="(Next|End)" """)

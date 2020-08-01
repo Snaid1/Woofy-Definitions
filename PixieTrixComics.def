@@ -1,0 +1,5 @@
+﻿comic "Pixie Trix Comics"
+start_at "https://pixietrixcomix.com/pixie-trix-comix/the-job-listing"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img title=".*?" src=".*?" id="cc-comic" """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)
