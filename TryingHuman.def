@@ -1,0 +1,5 @@
+﻿comic "Trying Human"
+start_at "https://www.tryinghuman.com/comic/prologue--01"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" ?><img """):
+    download("""<img title=".*?" src="(?<content>[^"]*?)" id="cc-comic" """)

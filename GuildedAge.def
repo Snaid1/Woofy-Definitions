@@ -1,0 +1,5 @@
+﻿comic "Guilded Age"
+start_at "http://guildedage.net/comic/chapter-1-cover/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" ?>"""):
+    download("""<img src="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" *?\/>""")

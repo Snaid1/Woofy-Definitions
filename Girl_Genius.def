@@ -2,4 +2,4 @@
 start_at "http://www.girlgeniusonline.com/comic.php?date=20021104"
  
 for page in visit("""<a href="(?<content>[^"]*?)"><IMG ALT=".*?" BORDER=.*? SRC='.*?'"""):
-    download("""<a href=".*?"><IMG ALT=".*?" BORDER=.*? SRC='(?<content>[^"]*?)'""")
+    download("""<IMG ALT=['"][^'"]*?['"] BORDER=[0-9]*? SRC=['"](?<content>[^'"]*?)['"] """)
