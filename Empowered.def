@@ -1,0 +1,5 @@
+﻿comic "Empowered"
+start_at "https://www.empoweredcomic.com/comic/volume-1-page-1"
+ 
+for page in visit("""<div id="cc-comicbody">\s*?<a href="(?<content>[^"]*?)" ?"""):
+    download("""<div id="cc-comicbody">\s*?(?:<a href="[^"]*?" ?(?:alt="[^"]*?"|) ?(?:title="[^"]*?"|) ?>|)\s?<img ?(?:title="[^"]*?"|) ?src="(?<content>[^"]*?)" ?id="cc-comic" ?""")

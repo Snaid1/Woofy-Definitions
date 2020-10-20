@@ -1,0 +1,5 @@
+﻿comic "Sorcery 101"
+start_at "https://kelmcdonald.com/sorcery-101/sorcery101-ch-01/"
+ 
+for page in visit("""<a href='(?<content>[^']*?)' class='webcomic-link webcomic10-link next-webcomic-link next-webcomic10-link'>Next"""):
+    download("""<img width="[^"]*?" height="[^"]*?" src="(?<content>[^"]*?)" class="attachment-full""")

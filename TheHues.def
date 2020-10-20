@@ -1,0 +1,5 @@
+﻿comic "The Hues"
+start_at "http://thehues.alexheberling.com/comic/chapter01/"
+ 
+for page in visit("""<div id="comic">\s*?<a href="(?<content>[^"]*?)" ?"""):
+    download("""<div id="comic">\s*?(?:<a href="[^"]*?" ?(?:alt="[^"]*?"|) ?(?:title="[^"]*?"|) ?>|)\s?<img src="(?<content>[^"]*?)" ?""")

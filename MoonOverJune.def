@@ -1,0 +1,5 @@
+﻿comic "Moon Over June"
+start_at "https://moj.slipshine.net/comic/0001"
+ 
+for page in visit("""<a class="cc-next" rel="next" href="(?<content>[^"]*?)">"""):
+    download("""(<img title="(?:[^"]*?)" src="|<embed height="[^"]*?" width="[^"]*?" src=")(?<content>[^"]*?)?(" id="(?:[^"]*?)" *\/|" *\/>)""")

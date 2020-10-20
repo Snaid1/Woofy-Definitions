@@ -1,0 +1,5 @@
+﻿comic "Least I Could Do"
+start_at "https://leasticoulddo.com/comic/20030210"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" rel="next" ?"""):
+    download("""<img class="comic" src="(?<content>[^"]*?)" ?""")

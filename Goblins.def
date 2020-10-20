@@ -1,0 +1,5 @@
+﻿comic "Goblins"
+start_at "https://www.goblinscomic.com/comic/06252005"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)"\s*?><img title="[^"]*?"\s*?src="[^"]*?"\s*?id="cc-comic"\s*?"""):
+    download("""<img title="[^"]*?"\s*?src="(?<content>[^"]*?)"\s*?id="cc-comic"\s*?""")

@@ -1,0 +1,5 @@
+﻿comic "Go Get A Roomie"
+start_at "https://www.gogetaroomie.com/comic/and-so-it-begins"
+ 
+for page in visit("""<div id="cc-comicbody">\s*?<a href="(?<content>[^"]*?)" ?"""):
+    download("""<div id="cc-comicbody">\s*?(?:<a href="[^"]*?" ?(?:alt="[^"]*?"|) ?(?:title="[^"]*?"|) ?>|)\s?<img ?(?:title="[^"]*?"|) ?src="(?<content>[^"]*?)" ?id="cc-comic" ?""")

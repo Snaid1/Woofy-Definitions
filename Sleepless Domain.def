@@ -1,0 +1,5 @@
+﻿comic "Sleepless Domain"
+start_at "https://www.sleeplessdomain.com/comic/chapter-1-cover"
+ 
+for page in visit("""<div id="cc-comicbody">\s*?<a href="(?<content>[^"]*?)" ?"""):
+    download("""<div id="cc-comicbody">\s*?(?:<a href="[^"]*?" ?(?:alt="[^"]*?"|) ?(?:title="[^"]*?"|) ?>|)\s?<img ?(?:title="[^"]*?"|) ?src="(?<content>[^"]*?)" ?id="cc-comic" ?""")

@@ -1,0 +1,5 @@
+﻿comic "Bear Nuts"
+start_at "https://bearnutscomic.com/2008/08/17/01-bear-nuts/"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)" rel="next" ?"""):
+    download("""<div id="comic"> ?<img src="(?<content>[^"]*?)" ?""")
