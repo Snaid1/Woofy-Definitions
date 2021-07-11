@@ -1,5 +1,0 @@
-﻿comic "By The Book"
-start_at "http://www.btbcomic.com/comic/chapter-1-page-0/"
- 
-for page in visit("""<div id="comic">\s*?<a href="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" ?>\s*?<img src="(?:.|\s)*?" ?"""):
-    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

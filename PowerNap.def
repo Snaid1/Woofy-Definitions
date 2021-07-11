@@ -1,5 +1,5 @@
 ﻿comic "Power Nap"
-start_at "http://www.powernapcomic.com/d/20110617.html"
+start_at "https://www.powernapcomic.com/d/20110617.html"
  
 for page in visit("""<a href="(?<content>[^"]*?)"><img src="[^"]*?" alt="the next comic" ?"""):
-    download("""<center>\s*?<img src="(?<content>[^"]*?)" border=[0-9]*?""")
+    download("""<center>\s*?<img src="\s(?<content>[^"]*?)" border""")

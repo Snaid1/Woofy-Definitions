@@ -1,5 +1,0 @@
-﻿comic "Flipside Book 0"
-start_at "http://flipside.keenspot.com/comic/book0/fs01pg01.html"
- 
-for page in visit("""<A HREF="(?<content>[^"]*?)"><FONT SIZE="4"\s*?FACE="garamond">Next &gt;<\/FONT><\/A>"""):
-	download("""<TR><TD><CENTER><IMG SRC="(?<content>[^"]*?)"(?: HEIGHT="[^"]*?" WIDTH="[^"]*?")?><\/CENTER><\/TD><\/TR>""")

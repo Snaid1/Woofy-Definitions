@@ -1,5 +1,0 @@
-﻿comic "Curvy"
-start_at "http://www.c.urvy.org/?date=20080329"
- 
-for page in visit("""<a href="(?<content>\/\?[^"]*?)"><img src="\/nav\/next.png" width="[0-9]*?" height="[0-9]*?" alt="Next page"><\/a>"""):
-	download("""<img src="(?<content>[^"]*?)" alt="" width="[0-9]*?" height="[0-9]*?">""")

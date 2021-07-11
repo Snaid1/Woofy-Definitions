@@ -1,5 +1,0 @@
-﻿comic "Cummoner"
-start_at "http://www.totempole666.com/comic/first-time-for-everything-00-cover/"
- 
-for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:[^"]*?)" title="(?:[^"]*?)" >"""):
-    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

@@ -1,5 +1,0 @@
-﻿comic "Wukrii"
-start_at "https://www.wukrii.com/comic/prologue-page-1/"
- 
-for page in visit("""<div id="comic">\s*?<a href="(?<content>[^"]*?)" ?"""):
-    download("""<div id="comic">\s*?(?:<a href="[^"]*?" ?(?:alt="[^"]*?"|) ?(?:title="[^"]*?"|) ?>|)\s?<img ?(?:title="[^"]*?"|) ?src="(?<content>[^"]*?)" ?""")

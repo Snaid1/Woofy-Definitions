@@ -1,0 +1,5 @@
+﻿comic "Punderworld"
+start_at "https://www.webtoons.com/en/challenge/punderworld/ep-1-long-way-up/viewer?title_no=312584&episode_no=3"
+ 
+for page in visit("""<a href="(?<content>[^"]*?)"\s*?(?:title="[^"]*?\s*?")\s*?(?:class="[^"]*?"|)>\s*?<em>Next Episode"""):
+	download("""<img\s*?src="[^"]*?"\s*?width="[^"]*?" height="[^"]*?" alt="image" class="_images" data-url="(?<content>[^"]*?)" ?""")

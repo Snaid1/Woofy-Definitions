@@ -1,5 +1,0 @@
-comic "The Depths"
-start_at "https://www.thedepthscomic.com/comic/page-01/"
- 
-for page in visit("""<a href="(?<content>[^"]*?)" alt="(?:[^"]*?)" title="(?:[^"]*?)" >"""):
-    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

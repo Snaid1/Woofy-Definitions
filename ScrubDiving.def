@@ -1,5 +1,0 @@
-﻿comic "Scrub Diving"
-start_at "http://scrubdiving.thecomicseries.com/comics/1#content-start"
- 
-for page in visit("""<a href="(?<content>[^"]*?)" id="comicimagelink" ?><img src="[^"]*?" alt="[^"]*?" title="[^"]*?" ?id="comicimage" ?"""):
-    download("""<img src="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" ?id="comicimage" ?""")

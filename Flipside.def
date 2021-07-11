@@ -1,5 +1,0 @@
-﻿comic "Flipside"
-start_at "http://flipside.keenspot.com/comic.php?i=1"
- 
-for page in visit("""<a href="(?<content>[^"]*?)" rel="next" accesskey="n">"""):
-	download("""<img style="[^"]*?" src="(?<content>http:\/\/cdn.flipside.keenspot.com\/comic\/[^"]*?)" border="0" alt="Click here to advance." class="ksc" \/>""")

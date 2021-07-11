@@ -1,5 +1,0 @@
-﻿comic "Alfie"
-start_at "http://buttsmithy.com/archives/comic/p1"
- 
-for page in visit("""<a href="(?<content>[^"]*?)" class="comic-nav-base comic-nav-next">Next &rsaquo;<\/a>"""):
-    download("""<img src="(?<content>[^"]*?)?" alt="(?:[^"]*?)" title="(?:[^"]*?)" *\/>""")

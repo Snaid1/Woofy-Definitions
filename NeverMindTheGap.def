@@ -1,5 +1,0 @@
-﻿comic "Never Mind The Gap"
-start_at "http://nmg.thecomicseries.com/comics/1"
- 
-for page in visit("""<a href="(?<content>[^"]*?)" rel="next" class="comicnavlink" ?><img src="[^"]*?" alt="[^"]*?" ?"""):
-    download("""<img src="(?<content>[^"]*?)" alt="[^"]*?" title="[^"]*?" ?id="comicimage" ?""")

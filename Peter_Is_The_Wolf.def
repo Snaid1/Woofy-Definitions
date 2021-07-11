@@ -1,5 +1,0 @@
-﻿comic "Peter is the Wolf"
-start_at "http://www.peteristhewolf.com/adult/001.html"
- 
-for page in visit("""<A HREF="(?<content>[^"]*?)">Next Page<\/a>"""):
-	download("""<IMG ALT=".*" SRC="(?<content>[^"]*?)">""")
